@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: white;
+    background-color: #121212;
+    scroll-behavior: smooth;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+
+.section {
+    height: 100vh;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease-in-out;
+    gap: 1.5rem;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    backdrop-filter: blur(10px);
+    background: url('iphonebg.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.macbook{
+    background: url('macbook1.jpg') center/cover no-repeat;
+    position: relative;
+}
+.wrist{
+    background: url('watch.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.hero-text, .quote {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    max-width: 40%;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #fff, #b15252);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.buttons button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-learn {
+    background: #72502a;
+    padding: 15px;
+    gap: 20px;
+    border-radius: 25px;
+    color: white;
+}
+
+.btn-learn:hover {
+    background: #ffffff;
+    color: black;
+    
+    transition-duration: 0.9s;
+    transition-behavior: ease;
+}
+
+.btn-shop {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-shop:hover {
+    background: #e5e7eb;
+}
+
+.quote {
+    max-width: 45%;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #f0f0f0;
+    text-align: right;
+    padding-right: 30px;
+    
+}
+
+.quote span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+
+.section:nth-child(even) {
+    
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    
+}
+
+.section p {
+    max-width: 700px;
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #aaa;
+}
+
+/* Simple animation */
+.hero, .section {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
